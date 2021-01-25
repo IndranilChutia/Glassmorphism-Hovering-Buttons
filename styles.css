@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+body{
+    overflow: hidden;
+}
+h1{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 60px;
+    font-size: 2rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    z-index: 69;
+    color: rgba(233, 233, 233, 0.952);
+    letter-spacing: 5px;
+    width: 330px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(233, 233, 233, 0.2);
+    border-left: 2px solid rgba(233, 233, 233, 0.4);
+    border-bottom: 2px solid rgba(233, 233, 233, 0.4);
+    background-color: rgba(233, 233, 233, 0.5);
+    box-shadow: 0 5px 45px #4d4d4d42;
+    backdrop-filter: blur(100px);
+    overflow: hidden;
+}
+
+h1:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 100%;
+    background: rgba(233, 233, 233, 0.5);
+    transform: skewX(45deg) translateX(400px);
+    transition: 0.5s;
+}
+
+h1:hover:before{
+    transform: skewX(45deg) translateX(-100px);
+}
+
+section{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#f3297d,#fff1fc);
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    z-index: 10;
+    border-top: 1px solid rgba(245, 245, 245, 0.3);
+    background: rgba(233, 233, 233, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+section .color{
+    position: absolute;
+    filter: blur(90px);
+}
+
+section .color:nth-child(1){
+    background-color: rgb(255, 40, 165);
+    width: 500px;
+    height: 500px;
+    top: -250px;
+}
+
+section .color:nth-child(2){
+    background-color: rgb(255, 221, 129);
+    width: 400px;
+    height: 450px;
+    bottom: -150px;
+    left: 50px;
+}
+
+section .color:nth-child(3){
+    background-color: rgb(35, 193, 255);
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    right: 0;
+}
+
+ul{
+    position: relative;
+    display: flex;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    top: 0;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    background: rgba(233, 233, 233, 0.3);
+    backdrop-filter: blur(90px);
+    border-radius: 10px;
+    z-index: 1;
+    border: 1px solid rgba(245, 245, 245, 0.4);
+    border-left: 2px solid rgba(245, 245, 245, 0.4);
+    border-right:2px solid rgba(245, 245, 245, 0.4);
+    box-shadow: 0 5px 45px #4d4d4d42;
+    overflow: hidden;
+    transition: top 0.3s, z-index 0s, transform 0.3s;
+    transition-delay: 0.3s, 0.3s, 0s ;
+}
+
+ul li a:hover{
+    transition-delay: 0s, 0.3s, 0.3s ;
+    top: -50px;
+    transform: translateY(50px);
+    z-index: 11;
+}
+
+ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background: rgba(233, 233, 233, 0.5);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+}
+
+ul li a:hover::before{
+    transform: skewX(45deg) translateX(-150px);
+}
